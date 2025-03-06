@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 const instance = axios.create({
-	baseURL: `http://${process.env.VUE_APP_URL}/`,
+	baseURL: `https://${process.env.VUE_APP_URL}/`,
 });
 
 export const scrapePromiseResData = <T>(res: Promise<AxiosResponse<T>>): Promise<T> => {
