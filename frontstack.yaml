@@ -1,0 +1,12 @@
+# for local development
+version: '3.7'
+services:
+  frontend:
+      container_name: j_frontend
+      restart: "always"
+      build:
+          context: .
+          target: 'production-stage'
+          dockerfile: front.Dockerfile
+      ports:
+          - '8080:80'
